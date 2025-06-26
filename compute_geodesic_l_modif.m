@@ -79,7 +79,7 @@ gamma0_1_liste{j+1}(i) = gamma0_1_liste{j}(i) - beta*grad_D2(i) ;
 gamma0_2_liste{j+1}(i) = gamma0_2_liste{j}(i) - beta*grad_D1(i) ;
 gamma0_3_liste{j+1}(i) = gamma0_3_liste{j}(i) - beta*grad_D3(i) ;
 
-distance_g_point(i) = min(sqrt((gamma0_1_liste{j+1}(i) - gamma1_1).^2 + (gamma0_2_liste{j+1}(i) - gamma1_2).^2 + (gamma0_3_liste{j+1}(i) - gamma1_3).^2));
+distance_g_point(i) = min(sqrt((gamma0_1_liste{j}(i) - gamma1_1).^2 + (gamma0_2_liste{j}(i) - gamma1_2).^2 + (gamma0_3_liste{j}(i) - gamma1_3).^2));
 
 end
 
@@ -124,8 +124,8 @@ D_gamma = max(distance_g_point);
  
  end
 
-  %plot3(gamma0_1_liste{j},gamma0_2_liste{j},gamma0_3_liste{j},'b');
-  %hold on;
+  plot3(gamma0_1_liste{j},gamma0_2_liste{j},gamma0_3_liste{j},'b');
+  hold on;
 
 
 j = j+1;
